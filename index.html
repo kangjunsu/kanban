@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칸반보드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>칸반보드</h1>
+
+        <div class="board">
+            <div class="column" data-column="todo">
+                <div class="column-header">
+                    <h2>TO-DO</h2>
+                    <span class="card-count">0</span>
+                </div>
+                <div class="card-container"></div>
+            </div>
+
+            <div class="column" data-column="in-progress">
+                <div class="column-header">
+                    <h2>IN-PROGRESS</h2>
+                    <span class="card-count">0</span>
+                </div>
+                <div class="card-container"></div>
+            </div>
+
+            <div class="column" data-column="done">
+                <div class="column-header">
+                    <h2>DONE</h2>
+                    <span class="card-count">0</span>
+                </div>
+                <div class="card-container"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="addCardBtn">+ 새 카드 추가</button>
+            <button id="clearDataBtn" class="btn-secondary">데이터 초기화</button>
+        </div>
+    </div>
+
+    <!-- 카드 편집 모달 -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>카드 편집</h2>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editTitle">제목</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescription">설명</label>
+                    <textarea id="editDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editPriority">우선순위</label>
+                    <select id="editPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn-primary">저장</button>
+                    <button type="button" id="cancelEdit" class="btn-secondary">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 토스트 알림 -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
