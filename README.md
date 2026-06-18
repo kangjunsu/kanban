@@ -2,6 +2,12 @@
 
 HTML, CSS, JavaScript로 구현한 드래그 앤 드롭 기능이 있는 칸반보드
 
+## 🌐 데모
+**[🚀 Live Demo](https://kangjunsu.github.io/kanban/)**
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://kangjunsu.github.io/kanban/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/kangjunsu/kanban)
+
 ## 🎯 주요 기능
 
 ### ✅ Phase 1 (MVP) - 완료
